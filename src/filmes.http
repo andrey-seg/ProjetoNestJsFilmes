@@ -1,0 +1,36 @@
+### LISTAR FILMES
+GET http://localhost:3001/filmes
+x-access-token: secrettoken
+
+### MOSTRAR FILME POR ID
+GET http://localhost:3001/filmes/1
+x-access-token: secrettoken
+
+### FILTRAR POR NOTA MÍNIMA
+GET http://localhost:3001/filmes/minimal-score/8
+x-access-token: secrettoken
+
+### CRIAR FILME
+POST http://localhost:3001/filmes
+Content-Type: application/json
+x-access-token: secrettoken
+
+{
+    "titulo": "Filme generico",
+    "ano": 2026,
+    "genero": "ação",
+    "nota": 10
+}
+
+### ATUALIZAR FILME
+PATCH http://localhost:3001/filmes/1
+Content-Type: application/json
+x-access-token: secrettoken
+
+{
+    "nota": 9
+}
+
+### REMOVER FILME
+DELETE http://localhost:3001/filmes/1
+x-access-token: secrettoken
